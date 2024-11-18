@@ -1,0 +1,33 @@
+type Product {
+  id: ID!
+  name: String!
+  price: Float!
+  category: Category!
+  attributes: [Attribute]
+}
+
+type Category {
+  id: ID!
+  name: String!
+  products: [Product]
+}
+
+type Attribute {
+  id: ID!
+  name: String!
+  value: String!
+}
+
+type Query {
+  products: [Product]
+  categories: [Category]
+}
+
+type Mutation {
+  createOrder(products: [ID!]!): OrderResponse
+}
+
+type OrderResponse {
+  success: Boolean!
+  message: String
+}

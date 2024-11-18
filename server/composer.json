@@ -1,0 +1,17 @@
+{
+  "name": "scandiweb/fullstack",
+  "type": "project",
+  "autoload": {
+    "psr-4": {
+      "Config\\": "config/",
+      "App\\Controller\\": "src/App/Controller/",
+      "Models\\": "src/Models/",
+      "Resolvers\\": "src/Resolvers/"
+    }
+  },
+  "require": {
+    "nikic/fast-route": "^1.3",
+    "webonyx/graphql-php": "^15.2",
+    "vlucas/phpdotenv": "^5.6"
+  }
+}
